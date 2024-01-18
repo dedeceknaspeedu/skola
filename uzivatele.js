@@ -1,4 +1,3 @@
-// Sample user data structure
 class User {
     constructor(name, surname, username, password, age, gender, status) {
       this.name = name;
@@ -11,7 +10,6 @@ class User {
     }
   }
   
-  // Function to show registration form
   function showRegistrationForm() {
     const content = document.getElementById("content");
     content.innerHTML = `
@@ -49,7 +47,6 @@ class User {
     `;
   }
   
-  // Function to register a new user
   function registerUser() {
     const name = document.getElementById("name").value;
     const surname = document.getElementById("surname").value;
@@ -61,17 +58,14 @@ class User {
   
     const newUser = new User(name, surname, username, password, age, gender, status);
   
-    // Get existing users from localStorage or initialize an empty array
     const users = JSON.parse(localStorage.getItem("users")) || [];
     users.push(newUser);
   
-    // Save users back to localStorage
     localStorage.setItem("users", JSON.stringify(users));
   
     alert("User registered successfully!");
   }
   
-  // Function to show user list
   function showUserList() {
     const content = document.getElementById("content");
     content.innerHTML = `
@@ -93,7 +87,6 @@ class User {
     }
   }
   
-  // Function to show login form
   function showLogin() {
     const content = document.getElementById("content");
     content.innerHTML = `
@@ -110,7 +103,6 @@ class User {
     `;
   }
   
-  // Function to handle user login
   function loginUser() {
     const username = document.getElementById("loginUsername").value;
     const password = document.getElementById("loginPassword").value;
@@ -129,3 +121,4 @@ class User {
       alert("Incorrect password. Please try again.");
     }
   }
+  
