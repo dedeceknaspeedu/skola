@@ -131,3 +131,8 @@ function loginUser() {
     alert("Incorrect password. Please try again.");
   }
 }
+
+function clearLocalStorage() {
+  localStorage.clear();
+  alert("Local Storage cleared!");
+}
